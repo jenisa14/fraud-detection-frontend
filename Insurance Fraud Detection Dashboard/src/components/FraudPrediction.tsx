@@ -10,7 +10,7 @@ interface PredictionResult {
   isDemo?: boolean;
 }
 
-const API_URL = 'http://localhost:5000'; // Your Flask backend URL
+// const API_URL 
 
 export function FraudPrediction() {
   const [selectedModel, setSelectedModel] = useState<ModelType>('l1');
