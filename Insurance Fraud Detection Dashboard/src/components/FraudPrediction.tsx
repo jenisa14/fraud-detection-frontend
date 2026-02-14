@@ -10,7 +10,10 @@ interface PredictionResult {
   isDemo?: boolean;
 }
 
-// const API_URL 
+// const API_URL = import.meta.env.VITE_API_URL || "https://fraud-detection-backend-1-c296.onrender.com";
+const API_URL = import.meta.env.VITE_API_URL as string;
+
+
 
 export function FraudPrediction() {
   const [selectedModel, setSelectedModel] = useState<ModelType>('l1');
@@ -276,7 +279,7 @@ export function FraudPrediction() {
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 Model: {result.model}
               </p>
-            </div>
+            </div>  
 
             {/* Probability Gauge */}
             <div className="p-6 rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/50">
